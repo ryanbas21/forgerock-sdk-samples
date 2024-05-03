@@ -60,6 +60,7 @@ const config = {
   },
   devServer: {
     port: 8443,
+    overlay: false,
     headers: {
       'Access-Control-Allow-Credentials': true,
       'Access-Control-Allow-Origin': 'null',

@@ -91,6 +91,7 @@ module.exports = () => {
     devServer: {
       allowedHosts: ['localhost', 'react.example.com', '.example.com'],
       https: true,
+      overlay: false,
       client: {
         overlay: false,
       },

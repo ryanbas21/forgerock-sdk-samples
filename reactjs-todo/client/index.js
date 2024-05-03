@@ -9,6 +9,7 @@
  */
 
 import { Config, TokenStorage } from '@forgerock/javascript-sdk';
+import { PIProtect } from '@forgerock/ping-protect';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -85,6 +86,9 @@ Config.set({
   } catch (err) {
     console.error(`Error: token retrieval for hydration; ${err}`);
   }
+  await PIProtect.start({
+    envId: 'env-123',
+  });
 
   /**
    * Pull custom values from outside of the app to (re)hydrate state.
